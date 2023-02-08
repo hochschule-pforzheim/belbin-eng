@@ -1,0 +1,15 @@
+.no-print {
+    display: none;
+}
+
+h1, h2, h3 {
+    page-break-before: auto;
+}
+
+img {
+    page-break-before: avoid;
+}
+
+a:visited, a:active {
+    color: inherit;
+}

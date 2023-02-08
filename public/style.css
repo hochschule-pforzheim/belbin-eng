@@ -1,0 +1,112 @@
+body {
+    width: 800px;
+
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.35;
+    color: #333;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.note {
+    padding: 8px 15px;
+    border: solid 1px #9f5a1d;
+    background: #fff9f5;
+    color: #9f5a1d;
+    border-radius: 4px;
+}
+
+.choices {
+    list-style-type: lower-alpha; 
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.choices span {
+    display: inline-block;
+    width: 500px;
+    vertical-align: top;
+
+    margin-right: 10px;
+}
+
+.choices li {
+    margin-bottom: 5px;
+}
+
+#next {
+    margin-right: 10px;
+}
+
+#hint {
+    font-weight: bold;
+    color: red;
+    margin-left: 0.5em;
+}
+
+.summary {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 5px 0;
+
+    border-left: solid 1px black;
+}
+
+.summary li {
+    margin: 5px 5px 5px 0;
+}
+
+.bar, .label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.label {
+    width: 40px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.bar {
+    background-color: #555555;
+    text-align: center;
+    color: white;
+}
+
+.second-choice {
+    background-color: rgb(217 232 237);
+    color: inherit;
+}
+
+.first-choice {
+    background-color: rgb(153 193 208);
+    color: inherit;
+}
+
+.summary a {
+    text-decoration: none;
+}
+
+button {
+    padding: 7px 13px;
+    border-radius: 5px;
+    border: solid 2px #AAA;
+    font-size: .9em;
+    background: #EEE;
+}
+
+button:hover {
+    background: #E0E0E0;
+}
+
+input[type='text'] {
+    padding: 3px 3px;
+    text-align: right;
+}
