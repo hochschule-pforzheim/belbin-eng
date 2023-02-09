@@ -7,10 +7,10 @@
             "Es liegt in meiner Natur, Ideen hervorzubringen. ",
             "Es ist meine Stärke, jemanden aus der Reserve zu locken, wenn ich merke, dass er etwas Wertvolles für die Ziele der Gruppe beisteuern kann.",
             "Man kann sich darauf verlassen das ich Dinge zuende bringe.",
-            "Meine technische Expertise ist für Gewöhnlich meine größte Stärke",
+            "Meine technische Expertise ist meine große Stärke. ",
             "Ich bin fähig, mich zeitweise unbeliebt zu machen, wenn das Endergebnis es wert ist. ",
             "Ich habe normalerweise ein Gespür dafür, was realistisch ist und was klappen könnte. ",
-            "Ich kann vernünftige Alternativen vorschlagen, ohne Partei zu ergreifen oder eigene Vorurteile ins Spiel zu bringen."
+            "Ich kann vernünftige Alternativen vorschlagen, ohne Partei zu ergreifen oder eigene Vorurteile ins Spiel zu bringen. "
         ]},
         {desc: "Wenn mir Teamarbeit möglicherweise nicht so liegt, kann das folgende Gründe haben:", statements: [
             "Ich fühle mich nicht wohl, wenn Meetings nicht gut strukturiert, gesteuert und geleitet sind. ",
