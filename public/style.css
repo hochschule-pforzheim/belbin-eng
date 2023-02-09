@@ -114,6 +114,15 @@ p.lead {
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
+a:link,
+a:visited {
+    color: #0d6efd;
+}
+
+a:link:hover {
+    color: #0a58ca;
+}
+
 label {
     display: inline-flex;
     width: 100%;
