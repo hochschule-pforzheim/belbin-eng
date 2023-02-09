@@ -271,10 +271,10 @@
         var choices = $("#cbody .choices");
         
         $.each(current.statements, function(i, e) {
-            choices.append("<li><span>" + e + "</span><input class='choice-" + i + "' type='text' size='1' maxlength='2'/></li>");
+            choices.append("<li><label><span>" + e + "</span><input class='form-control choice-" + i + "' type='text' size='1' maxlength='2'/></label></li>");
         });
         
-        $("#cbody form").append("<p class='footer'><button type='submit'>" + (curArea >= areas.length - 1 ? "Auswertung" : "Nächste Frage") + "</button><span id='hint'></span></p>");
+        $("#cbody form").append("<p class='footer'><button class='btn btn-primary' type='submit'>" + (curArea >= areas.length - 1 ? "Auswertung" : "Nächste Frage") + "</button><span id='hint'></span></p>");
 
         $('#cbody form').on('submit', checkFieldsAndAdvance);
 
