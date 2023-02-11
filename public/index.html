@@ -18,135 +18,142 @@
     </style>
   </head>
   <body>
-    <h1>Belbin Test</h1>
-    <section>
-      <p class="lead">
-        Der <a href="https://en.wikipedia.org/wiki/Belbin_Team_Inventory" target="_blank">Belbin Test</a> ist ein Instrument zur Selbsteinschätzung der Teamrolle. Er erlaubt es dir Aktivitätspräferenzen in einem Team zu ermitteln und kann dir so helfen deine Rolle besser einzuschätzen.
-      </p>
-      <p class="note no-print">
-        Dieser Test arbeitet komplett im Browser. Es werden keine Informationen gespeichert.
-      </p>
-    </section>
-    <section id="content">
-      <h2>Vorgehensweise</h2>
+    <main>
+      <h1>Belbin Test</h1>
+      <section>
+        <p class="lead">
+          Der <a href="https://en.wikipedia.org/wiki/Belbin_Team_Inventory" target="_blank">Belbin Test</a> ist ein Instrument zur Selbsteinschätzung der Teamrolle. Er erlaubt es dir Aktivitätspräferenzen in einem Team zu ermitteln und kann dir so helfen deine Rolle besser einzuschätzen.
+        </p>
+        <p class="note no-print">
+          Dieser Test arbeitet komplett im Browser. Es werden keine Informationen gespeichert.
+        </p>
+      </section>
+      <section id="content">
+        <h2>Vorgehensweise</h2>
 
-      <div id="cbody">
-        <p>
-          Es werden dir mehrere Abschnitte präsentiert, für die jeweils neun Sätze vorgeschlagen werden.
-          Verteile insgesamt 10 Punkte auf die Sätze, von denen du glaubst,
-          dass sie dein Verhalten am besten beschreiben. In extremen Fällen kannst du die Punkte auf alle Sätze
-          aufgeteilen oder einem einzigen Satz alle Punkte zuordnen.
-        </p>
-        <p>
-          Nach erfolgreichem Durchlauf aller Abschnitte erfolgt die Auswertung + Ergebnis.
-        </p>
-        <p class="footer">
-          <button class="btn btn-primary" id="start">Starte den Test!</button>
-        </p>
+        <div id="cbody">
+          <p>
+            Es werden dir mehrere Abschnitte präsentiert, für die jeweils neun Sätze vorgeschlagen werden.
+            Verteile insgesamt 10 Punkte auf die Sätze, von denen du glaubst,
+            dass sie dein Verhalten am besten beschreiben. In extremen Fällen kannst du die Punkte auf alle Sätze
+            aufgeteilen oder einem einzigen Satz alle Punkte zuordnen.
+          </p>
+          <p>
+            Nach erfolgreichem Durchlauf aller Abschnitte erfolgt die Auswertung + Ergebnis.
+          </p>
+          <p class="footer">
+            <button class="btn btn-primary" id="start">Starte den Test!</button>
+          </p>
+        </div>
+       </section>
+       <div id="summary-notes" style="display: none;">
+        <section>
+          <h2>Interpretation der Ergebnisse</h2>
+          <p>
+            Die höchste Punktzahl bei einer Teamrolle zeigt an, wo die Testperson in einem Team am wirkungsvollsten eingesetzt wird. Die zweithöchste Punktzahl kann aufzeigen,
+            welche Teamrolle der einzelne ersatzweise einnehmen kann, falls die Gruppe aus irgendeinem
+            Grund die primär geeignete Teamrolle nicht so sehr benötigt.
+          </p>
+          <p>
+            Die beiden niedrigsten Punktzahlen bei Teamrollen zeigen mögliche Schwachstellen auf. Es ist
+            der Person aber eher zu empfehlen, bei der Teamarbeit dort einen Kollegen/eine Kollegin mit
+            entsprechenden Stärken einzusetzen als zu versuchen, diese Schwächen zu beheben.
+          </p>
+          <p>
+            Bei der Einordnung handelt es sich immer um eine Momentaufnahme die den aktuellen Teamkontext widerspiegelt und nicht notwendigerweise um absolute Präferenzen.
+          </p>
+        </section>
+        <section>
+          <h2>Erklärung der Teamrollen</h2>
+          <table cellpadding="6" cellspacing="0">
+            <tr class="role-CO"><td><a name="role-CO">CO</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Co-ordinator">Co-ordinator</a></td><td>Vorsitzende/r, KoordinatorIn, KohäsionsführerIn</td></tr>
+            <tr class="role-SH"><td><a name="role-SH">SH</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Shaper">Shaper</a></td><td>GestaltgeberIn, ErgebnisführerIn, AktionistIn</td></tr>
+            <tr class="role-PL"><td><a name="role-PL">PL</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Plant">Plant</a></td><td>IdeengeberIn, ErfinderIn</td></tr>
+            <tr class="role-ME"><td><a name="role-ME">ME</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Monitor_Evaluator">Monitor Evaluator</a></td><td>BeobachterIn, kritische/r PrüferIn</td></tr>
+            <tr class="role-IMP"><td><a name="role-IMP">IMP</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Implementer">Implementer</a></td><td>UmsetzerIn, organisierte/r PragmatikerIn</td></tr>
+            <tr class="role-TW"><td><a name="role-TW">TW</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Team_Worker">Team Worker</a></td><td>TeamarbeiterIn, IntegriererIn</td></tr>
+            <tr class="role-RI"><td><a name="role-RI">RI</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Resource_Investigator">Resource Investigator</a></td><td>Kontaktmann, -frau, WegbereiterIn, WeichenstellerIn</td></tr>
+            <tr class="role-CF"><td><a name="role-CF">CF</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Completer_Finisher">Completer Finisher</a></td><td>VollenderIn, PerfektioniererIn</td></tr>
+            <tr class="role-SP"><td><a name="role-SP">SP</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Specialist">Spezialist</a></td><td>DomänenexperteIn</td></tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>Einordnung der Teamrollen</h2>
+          <p>
+            Die folgende Grafik ordnet die Belbin Teamrollen in das <a href="https://de.wikipedia.org/wiki/Themenzentrierte_Interaktion#Vierfaktorenmodell">Vierfaktorenmodell</a> der themenzentrierten Interaktion ein:
+          </p>
+          <p>
+            <svg width="600" version="1.1" viewBox="0 0 225.9 183.6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g transform="translate(-36.56 24.241)">
+                <g transform="matrix(1.4246 0 0 1.4246 -9.4205 -58.558)" fill="none" stroke="#333" stroke-width=".52647">
+                  <circle cx="114.87" cy="92.989" r="56.236" stop-color="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="m114.87 37.312-48.35 82.827h96.7z"/>
+                </g>
+                <g font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" letter-spacing="0px" stroke-width=".26458" word-spacing="0px">
+                  <text x="206.82021" y="3.16046" style="line-height:1.35" xml:space="preserve"><tspan x="206.82021" y="3.16046" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458">Environment</tspan></text>
+                  <text x="154.17514" y="-15.023648" text-align="center" text-anchor="middle" style="line-height:1.35" xml:space="preserve"><tspan x="154.17514" y="-15.023648" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458" text-align="center" text-anchor="middle">Task</tspan></text>
+                  <text x="42.156384" y="121.98647" style="line-height:1.35" xml:space="preserve"><tspan x="42.156384" y="121.98647" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458">Individual</tspan></text>
+                  <text x="231.57716" y="121.73921" style="line-height:1.35" xml:space="preserve"><tspan x="231.57716" y="121.73921" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458">Team</tspan></text>
+                </g>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Shaper">
+                  <rect x="135.55" y=".4093" width="37.346" height="13.45" rx="1.753" ry="1.9028" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="143.35599" y="8.6632338" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="143.35599" y="8.6632338" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Shaper</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Completer_Finisher">
+                  <rect x="116.87" y="24.763" width="74.714" height="13.451" rx="3.5071" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="123.43947" y="33.610962" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="123.43947" y="33.610962" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Monitor Evaluator</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Resource_Investigator">
+                  <rect x="198.65" y="32.808" width="57.708" height="21.429" rx="2.7088" ry="3.0315" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="226.9268" y="40.968628" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="226.9268" y="40.968628" text-align="center">Resource</tspan><tspan x="226.9268" y="49.110126" text-align="center">Investigator</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Implementer">
+                  <g transform="translate(2.2707 -.56768)">
+                    <rect x="184.81" y="80.985" width="51.605" height="13.795" rx="2.4223" ry="1.9515" fill="#3fa9f5" stop-color="#000000"/>
+                    <text x="210.5889" y="89.531502" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="210.5889" y="89.531502" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458" text-align="center" text-anchor="middle">Implementer</tspan></text>
+                  </g>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Teamworker">
+                  <rect x="124.52" y="105.87" width="55.084" height="13.451" rx="2.5856" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="132.05075" y="114.80544" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="132.05075" y="114.80544" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Team Worker</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Plant">
+                  <rect x="82.083" y="86.086" width="32.998" height="13.451" rx="1.5489" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="89.391235" y="94.921822" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="89.391235" y="94.921822" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Plant</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Completer_Finisher">
+                  <rect x="82.646" y="44.79" width="49.467" height="21.429" rx="2.322" ry="3.0315" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="107.37309" y="53.665302" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="107.37309" y="53.665302" text-align="center">Completer</tspan><tspan x="107.37309" y="61.806801" text-align="center">Finisher</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Specialist">
+                  <rect x="62.738" y="10.887" width="49.467" height="13.451" rx="2.322" ry="1.9028" fill="#3fa9f5" stop-color="#000000"/>
+                  <text x="87.539513" y="19.261412" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="87.539513" y="19.261412" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458" text-align="center" text-anchor="middle">Specialist</tspan></text>
+                </a>
+                <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Co-ordinator">
+                  <g transform="translate(-6.3373)">
+                    <rect x="131.37" y="67.188" width="58.387" height="13.451" rx="2.7407" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
+                    <text x="139.78578" y="76.036057" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="139.78578" y="76.036057" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Co-ordinator</tspan></text>
+                  </g>
+                </a>
+              </g>
+            </svg>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="no-print">Weiterführende Links</h2>
+          <ul class="no-print">
+            <li><a href="http://de.wikipedia.org/wiki/Themenzentrierte_Interaktion" target="_blank">Themenzentrierte Interaktion (Wikipedia)</a></li>
+            <li><a href="http://en.wikipedia.org/wiki/Belbin_Team_Inventory" target="_blank">Belbin Test (Wikipedia, eng)</a></li>
+          </ul>
+        </section>
       </div>
-     </section>
-     <div id="summary-notes" style="display: none;">
-      <section>
-        <h2>Interpretation der Ergebnisse</h2>
-        <p>
-          Die höchste Punktzahl bei einer Teamrolle zeigt an, wo die Testperson in einem Team am wirkungsvollsten eingesetzt wird. Die zweithöchste Punktzahl kann aufzeigen,
-          welche Teamrolle der einzelne ersatzweise einnehmen kann, falls die Gruppe aus irgendeinem
-          Grund die primär geeignete Teamrolle nicht so sehr benötigt.
-        </p>
-        <p>
-          Die beiden niedrigsten Punktzahlen bei Teamrollen zeigen mögliche Schwachstellen auf. Es ist
-          der Person aber eher zu empfehlen, bei der Teamarbeit dort einen Kollegen/eine Kollegin mit
-          entsprechenden Stärken einzusetzen als zu versuchen, diese Schwächen zu beheben.
-        </p>
-        <p>
-          Bei der Einordnung handelt es sich immer um eine Momentaufnahme die den aktuellen Teamkontext widerspiegelt und nicht notwendigerweise um absolute Präferenzen.
-        </p>
-      </section>
-      <section>
-        <h2>Erklärung der Teamrollen</h2>
-        <table cellpadding="6" cellspacing="0">
-          <tr class="role-CO"><td><a name="role-CO">CO</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Co-ordinator">Co-ordinator</a></td><td>Vorsitzende/r, KoordinatorIn, KohäsionsführerIn</td></tr>
-          <tr class="role-SH"><td><a name="role-SH">SH</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Shaper">Shaper</a></td><td>GestaltgeberIn, ErgebnisführerIn, AktionistIn</td></tr>
-          <tr class="role-PL"><td><a name="role-PL">PL</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Plant">Plant</a></td><td>IdeengeberIn, ErfinderIn</td></tr>
-          <tr class="role-ME"><td><a name="role-ME">ME</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Monitor_Evaluator">Monitor Evaluator</a></td><td>BeobachterIn, kritische/r PrüferIn</td></tr>
-          <tr class="role-IMP"><td><a name="role-IMP">IMP</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Implementer">Implementer</a></td><td>UmsetzerIn, organisierte/r PragmatikerIn</td></tr>
-          <tr class="role-TW"><td><a name="role-TW">TW</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Team_Worker">Team Worker</a></td><td>TeamarbeiterIn, IntegriererIn</td></tr>
-          <tr class="role-RI"><td><a name="role-RI">RI</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Resource_Investigator">Resource Investigator</a></td><td>Kontaktmann, -frau, WegbereiterIn, WeichenstellerIn</td></tr>
-          <tr class="role-CF"><td><a name="role-CF">CF</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Completer_Finisher">Completer Finisher</a></td><td>VollenderIn, PerfektioniererIn</td></tr>
-          <tr class="role-SP"><td><a name="role-SP">SP</a></td><td><a href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Specialist">Spezialist</a></td><td>DomänenexperteIn</td></tr>
-        </table>
-      </section>
+    </main>
 
-      <section>
-        <h2>Einordnung der Teamrollen</h2>
-        <p>
-          Die folgende Grafik ordnet die Belbin Teamrollen in das <a href="https://de.wikipedia.org/wiki/Themenzentrierte_Interaktion#Vierfaktorenmodell">Vierfaktorenmodell</a> der themenzentrierten Interaktion ein:
-        </p>
-        <p>
-          <svg width="600" version="1.1" viewBox="0 0 225.9 183.6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g transform="translate(-36.56 24.241)">
-              <g transform="matrix(1.4246 0 0 1.4246 -9.4205 -58.558)" fill="none" stroke="#333" stroke-width=".52647">
-                <circle cx="114.87" cy="92.989" r="56.236" stop-color="#000000" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="m114.87 37.312-48.35 82.827h96.7z"/>
-              </g>
-              <g font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" letter-spacing="0px" stroke-width=".26458" word-spacing="0px">
-                <text x="206.82021" y="3.16046" style="line-height:1.35" xml:space="preserve"><tspan x="206.82021" y="3.16046" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458">Environment</tspan></text>
-                <text x="154.17514" y="-15.023648" text-align="center" text-anchor="middle" style="line-height:1.35" xml:space="preserve"><tspan x="154.17514" y="-15.023648" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458" text-align="center" text-anchor="middle">Task</tspan></text>
-                <text x="42.156384" y="121.98647" style="line-height:1.35" xml:space="preserve"><tspan x="42.156384" y="121.98647" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458">Individual</tspan></text>
-                <text x="231.57716" y="121.73921" style="line-height:1.35" xml:space="preserve"><tspan x="231.57716" y="121.73921" font-family="'Roboto Mono'" font-size="6.0307px" font-weight="500" stroke-width=".26458">Team</tspan></text>
-              </g>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Shaper">
-                <rect x="135.55" y=".4093" width="37.346" height="13.45" rx="1.753" ry="1.9028" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="143.35599" y="8.6632338" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="143.35599" y="8.6632338" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Shaper</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Completer_Finisher">
-                <rect x="116.87" y="24.763" width="74.714" height="13.451" rx="3.5071" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="123.43947" y="33.610962" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="123.43947" y="33.610962" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Monitor Evaluator</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Resource_Investigator">
-                <rect x="198.65" y="32.808" width="57.708" height="21.429" rx="2.7088" ry="3.0315" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="226.9268" y="40.968628" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="226.9268" y="40.968628" text-align="center">Resource</tspan><tspan x="226.9268" y="49.110126" text-align="center">Investigator</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Implementer">
-                <g transform="translate(2.2707 -.56768)">
-                  <rect x="184.81" y="80.985" width="51.605" height="13.795" rx="2.4223" ry="1.9515" fill="#3fa9f5" stop-color="#000000"/>
-                  <text x="210.5889" y="89.531502" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="210.5889" y="89.531502" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458" text-align="center" text-anchor="middle">Implementer</tspan></text>
-                </g>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Teamworker">
-                <rect x="124.52" y="105.87" width="55.084" height="13.451" rx="2.5856" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="132.05075" y="114.80544" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="132.05075" y="114.80544" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Team Worker</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Plant">
-                <rect x="82.083" y="86.086" width="32.998" height="13.451" rx="1.5489" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="89.391235" y="94.921822" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="89.391235" y="94.921822" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Plant</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Completer_Finisher">
-                <rect x="82.646" y="44.79" width="49.467" height="21.429" rx="2.322" ry="3.0315" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="107.37309" y="53.665302" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="107.37309" y="53.665302" text-align="center">Completer</tspan><tspan x="107.37309" y="61.806801" text-align="center">Finisher</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Specialist">
-                <rect x="62.738" y="10.887" width="49.467" height="13.451" rx="2.322" ry="1.9028" fill="#3fa9f5" stop-color="#000000"/>
-                <text x="87.539513" y="19.261412" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="87.539513" y="19.261412" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458" text-align="center" text-anchor="middle">Specialist</tspan></text>
-              </a>
-              <a xlink:href="https://en.wikipedia.org/wiki/Team_Role_Inventories#Co-ordinator">
-                <g transform="translate(-6.3373)">
-                  <rect x="131.37" y="67.188" width="58.387" height="13.451" rx="2.7407" ry="1.9029" fill="#3fa9f5" stop-color="#000000"/>
-                  <text x="139.78578" y="76.036057" font-family="'Roboto Mono'" font-size="6.0307px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.35" xml:space="preserve"><tspan x="139.78578" y="76.036057" font-family="'Roboto Mono'" font-size="6.0307px" stroke-width=".26458">Co-ordinator</tspan></text>
-                </g>
-              </a>
-            </g>
-          </svg>
-        </p>
-      </section>
+    <footer class="no-print">
+      Quellen <a href="https://github.com/nikku/belbin">auf GitHub</a>.
+    </footer>
 
-      <section>
-        <h2 class="no-print">Weiterführende Links</h2>
-        <ul class="no-print">
-          <li><a href="http://de.wikipedia.org/wiki/Themenzentrierte_Interaktion" target="_blank">Themenzentrierte Interaktion (Wikipedia)</a></li>
-          <li><a href="http://en.wikipedia.org/wiki/Belbin_Team_Inventory" target="_blank">Belbin Test (Wikipedia, eng)</a></li>
-        </ul>
-      </section>
-    </div>
   </body>
 </html>

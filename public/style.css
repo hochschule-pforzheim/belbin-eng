@@ -5,19 +5,35 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
-    max-width: 800px;
-
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     color: #212529;
-
-    margin: 2rem;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 800px;
+    flex: 1;
+    margin: 0 2rem;
+    margin-bottom: auto;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+
+    border-top: solid 1px #DDD;
+    color: #AAA;
+}
 
 h1, h2, h3, h4 {
     margin-top: 2.5rem;
