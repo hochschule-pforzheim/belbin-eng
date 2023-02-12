@@ -373,7 +373,7 @@ a:link:hover {
     width: 2.1rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .img {
         width: 100%;
     }
@@ -391,7 +391,7 @@ a:link:hover {
     }
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
     main {
         max-width: 768px;
     }
