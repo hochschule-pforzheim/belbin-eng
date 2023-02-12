@@ -146,12 +146,18 @@
         for (var i = 0; i < current.statements.length; i++) {
             var e = $("#cbody .choice-" + i);
             var val = $(e).val();
-            if (val != "") {
-                sum += parseInt(val);
-            }
+
+            sum += parseInt(val, 10) || 0;
         }
 
-        $("#hint").text("Noch freie Punkte: " + (10 - sum));
+        if (sum === 10) {
+            $("#hint").addClass("success").text("Alle Punkte vergeben.");
+        } else
+        if (sum < 10) {
+            $("#hint").removeClass("success").text(`Noch ${ 10 - sum } freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.`);
+        } else {
+            $("#hint").removeClass("success").text(`${ sum - 10 } Punkt${ sum - 10 !== 1 ? 'e' : '' } zu viel vergeben.`);
+        }
     }
     
     function saveResults(results) {
