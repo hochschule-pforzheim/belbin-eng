@@ -315,7 +315,7 @@
                 <button class="btn btn-primary btn-lg btn-next" type="submit">
                     ${ (curArea >= areas.length - 1 ? "Auswertung" : "Nächste Frage") }
                 </button>
-                <span id="hint"></span>
+                <span class="text" id="hint"></span>
             </p>
         `);
 

@@ -308,7 +308,7 @@ a:link:hover {
 
 .choice .form-control {
     margin-right: .75rem;
-    width: 2.5rem;
+    width: 3rem;
     text-align: right;
 }
 
@@ -316,13 +316,13 @@ a:link:hover {
     margin-right: 10px;
 }
 
-#hint {
+.footer .text {
     font-weight: bold;
     color: #dc3545;
-    margin-left: 1rem;
+    padding: .8rem;
 }
 
-#hint.success {
+.text.success {
     color: #198754;
 }
 
@@ -373,6 +373,18 @@ a:link:hover {
     width: 2.1rem;
 }
 
+.show-questions,
+.show-summary,
+.show-intro {
+    display: none;
+}
+
+.state-questions .show-questions,
+.state-intro .show-intro,
+.state-summary .show-summary {
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
     .img {
         width: 100%;
@@ -389,6 +401,14 @@ a:link:hover {
     .footer {
         margin-top: 1.5rem;
     }
+
+    .footer > * {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -399,16 +419,4 @@ a:link:hover {
     .img {
         max-width: 600px;
     }
-}
-
-.show-questions,
-.show-summary,
-.show-intro {
-    display: none;
-}
-
-.state-questions .show-questions,
-.state-intro .show-intro,
-.state-summary .show-summary {
-    display: block;
 }
