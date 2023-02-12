@@ -281,27 +281,63 @@
         curArea = i;
         var current = areas[i];
         
-        $("#content h2").text("Frage " + (i + 1) + " von " + areas.length);
-        $("#cbody").html("<form><p>" + current.desc + "</p><ol class='choices'></ol></form>");
+        $("#content h2").text(`Frage ${ (i + 1) } von ${ areas.length }`);
+
+        $("#cbody").html(`
+            <form>
+                <p>${ current.desc }</p>
+                <ol class="choices"></ol>
+            </form>
+        `);
 
         var choices = $("#cbody .choices");
         
         $.each(current.statements, function(i, e) {
-            choices.append("<li><label><span>" + e + "</span><input class='form-control choice-" + i + "' type='text' size='1' maxlength='2'/></label></li>");
+            choices.append(`
+                <li class="choice">
+                    <label>
+                        <div class="answer">${ e }</div>
+
+                        <input class="form-control choice-${ i }" type="text" maxlength="2"/>
+
+                        <div class="input-group">
+                            <a class="btn btn-outline btn-inc-dec" data-inc="-1">-</a>
+                            <a class="btn btn-outline btn-inc-dec" data-inc="1">+</a>
+                        </div>
+
+                    </label>
+                </li>
+            `);
         });
         
-        $("#cbody form").append("<p class='footer'><button class='btn btn-primary' type='submit'>" + (curArea >= areas.length - 1 ? "Auswertung" : "Nächste Frage") + "</button><span id='hint'></span></p>");
+        $("#cbody form").append(`
+            <p class="footer">
+                <button class="btn btn-primary btn-lg btn-next" type="submit">
+                    ${ (curArea >= areas.length - 1 ? "Auswertung" : "Nächste Frage") }
+                </button>
+                <span id="hint"></span>
+            </p>
+        `);
+
+        $('#cbody [data-inc]').on('click', function(event) {
+
+            event.stopPropagation();
+
+            const inc = parseInt($(this).data('inc'), 10);
+
+            const input = $(this).parents('.choice').find('input');
+            const value = parseInt(input.val(), 10) || 0;
+
+            input.val(Math.max(value + inc, 0));
+
+            checkAssignedPoints(event);
+        });
+
+        $('#cbody .choice-0').focus();
+
+        $("#cbody input").on('input change', checkAssignedPoints);
 
         $('#cbody form').on('submit', checkFieldsAndAdvance);
-
-        $('.choice-0').focus();
-
-        if (false) {
-            $(".choice-" + Math.round(Math.random() * 7)).val(10);
-            checkFieldsAndAdvance();
-        } else {
-            $("#cbody input[type=text]").change(checkAssignedPoints);
-        }
     }
     
     $(function() {
