@@ -263,7 +263,7 @@
                     <span class="bar role-${ key1 }" style="width: ${ width }px">
                         ${ resultsMap[key1] > 3 ? resultsMap[key1] : ' ' }
                     </span>
-                    ${ resultsMap[key1] < 3 ? resultsMap[key1] : '' }
+                    ${ resultsMap[key1] <= 3 ? resultsMap[key1] : '' }
                     <a class="label" href="#role-${ key1 }">
                         <abbr title="${ abbrMap[key1] }">${ key1 }</abbr>
                     </a>
