@@ -132,11 +132,18 @@
         }
 
         if (sum != 10) {
-            $("#hint").text("Summe der Punkte ist " + sum + " und nicht 10.");
+            showHint(`Summe der Punkte ist ${ sum } und nicht 10.`, 'danger');
         } else {
             current.result = result;
             advance();
         }
+    }
+
+    function showHint(text, className='primary') {
+        $('.count-hint')
+            .text(text)
+            .removeClass('alert-primary alert-danger alert-warning alert-success hidden')
+            .addClass(`alert-${ className }`);
     }
 
     function checkAssignedPoints(event) {
@@ -144,19 +151,19 @@
         var sum = 0;
 
         for (var i = 0; i < current.statements.length; i++) {
-            var e = $("#cbody .choice-" + i);
+            var e = $(`#cbody .choice-${ i }`);
             var val = $(e).val();
 
             sum += parseInt(val, 10) || 0;
         }
 
         if (sum === 10) {
-            $("#hint").addClass("success").text("Alle Punkte vergeben.");
+            showHint('Alle Punkte vergeben.', 'success');
         } else
         if (sum < 10) {
-            $("#hint").removeClass("success").text(`Noch ${ 10 - sum } freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.`);
+            showHint(`Noch ${ 10 - sum } freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.`, 'warning');
         } else {
-            $("#hint").removeClass("success").text(`${ sum - 10 } Punkt${ sum - 10 !== 1 ? 'e' : '' } zu viel vergeben.`);
+            showHint(`${ sum - 10 } Punkt${ sum - 10 !== 1 ? 'e' : '' } zu viel vergeben.`, 'danger');
         }
     }
     
@@ -311,11 +318,13 @@
         });
         
         $("#cbody form").append(`
+            <div class="alert alert-primary count-hint hidden sticky"></div>
+
             <p class="footer">
+
                 <button class="btn btn-primary btn-lg btn-next" type="submit">
                     ${ (curArea >= areas.length - 1 ? "Auswertung" : "Nächste Frage") }
                 </button>
-                <span class="text" id="hint"></span>
             </p>
         `);
 
@@ -331,6 +340,10 @@
             input.val(Math.max(value + inc, 0));
 
             checkAssignedPoints(event);
+        });
+
+        $('main').get(0).scrollIntoView({
+            block: 'start'
         });
 
         $('#cbody .choice-0').focus();
