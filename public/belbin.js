@@ -238,8 +238,13 @@
             return map;
         }, {});
 
-        $("#content h2").text("Zusammenfassung");
-        $("#cbody").html("<p>Folgendes Profil ergibt sich auf Basis der Antworten:</p><ul class='summary'></ul>");
+        $('#content h2').text('Zusammenfassung');
+        $('#cbody').html(`
+            <p>
+                Folgendes Profil ergibt sich auf Basis der Antworten:
+            </p>
+            <ul class="summary"></ul>
+        `);
 
         var ul = $("#cbody .summary");
         var MAX_POINTS = 70;
@@ -247,7 +252,17 @@
         
         for (var key1 in abbrMap) {
             var width = Math.round((resultsMap[key1] / MAX_POINTS) * MAX_WIDTH);
-            ul.append("<li><div class='bar role-" + key1 + "' style='width: " + width + "px'>" + (resultsMap[key1] || '') + "</div><a class='label' href='#role-" + key1 + "'><abbr title='" + abbrMap[key1] + "'>" + key1 + "</abbr></a></li>");
+            ul.append(`
+                <li>
+                    <span class="bar role-${ key1 }" style="width: ${ width }px">
+                        ${ resultsMap[key1] > 3 ? resultsMap[key1] : '' }
+                    </span>
+                    ${ resultsMap[key1] < 3 ? resultsMap[key1] : '' }
+                    <a class="label" href="#role-${ key1 }">
+                        <abbr title="${ abbrMap[key1] }">${ key1 }</abbr>
+                    </a>
+                </li>
+            `);
         }
 
         var sortedResults = results.sort(function(a, b) {

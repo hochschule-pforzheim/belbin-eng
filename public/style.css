@@ -495,13 +495,14 @@ a:link:hover {
 
 .label {
     width: 40px;
-    margin-left: 10px;
     text-align: left;
+    margin-left: .25rem;
 }
 
 .bar {
     border: solid 1px #555555;
     text-align: center;
+    margin-right: .25rem;
 }
 
 .second-choice {
