@@ -158,7 +158,13 @@
         }
 
         if (sum === 10) {
-            showHint($(`<span>Alle Punkte vergeben. <a href class="btn-next alert-link">Weiter</a>.</span>`), 'success');
+            const nextLabel = curArea === areas.length - 1 ? 'Zur Auswertung' : 'Zur nächsten Frage';
+
+            const el = $(`<span>Alle Punkte vergeben. <a href class="next-link alert-link">${ nextLabel }</a>.</span>`);
+
+            el.find('.next-link').on('click', checkFieldsAndAdvance);
+
+            showHint(el, 'success');
         } else
         if (sum < 10) {
             showHint($(`<span>Noch <strong>${ 10 - sum }</strong> freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.</span>`), 'warning');
@@ -366,8 +372,6 @@
         $("#cbody input").on('input change', checkAssignedPoints);
 
         $('#cbody form').on('submit', checkFieldsAndAdvance);
-
-        $('#cbody form').on('click', '.btn-next', checkFieldsAndAdvance);
     }
     
     $(function() {
@@ -377,7 +381,7 @@
         if (results) {
             showSummary(results);
         } else {
-            $("#start").click(advance);
+            $("#start").on('click', advance);
         }
     });
 })();
