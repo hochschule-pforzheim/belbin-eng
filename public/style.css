@@ -269,6 +269,7 @@ button:focus:not(:focus-visible) {
 }
 
 .btn-outline {
+    --bs-btn-bg: white;
     --bs-btn-color: #6c757d;
     --bs-btn-border-color: #6c757d;
     --bs-btn-hover-color: #fff;
@@ -444,7 +445,9 @@ a.alert-link {
 }
 
 .choice {
-    margin-bottom: .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    margin: .1rem;
 }
 
 .choice .answer {
@@ -581,7 +584,7 @@ a.alert-link {
 
 @media screen and (min-width: 769px) {
     main {
-        max-width: 768px;
+        max-width: 850px;
     }
 
     .img {
