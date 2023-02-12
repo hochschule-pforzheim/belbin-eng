@@ -406,6 +406,11 @@ a:link:hover {
     border-radius: var(--bs-alert-border-radius);
 }
 
+a.alert-link {
+    font-weight: 700;
+    color: var(--bs-alert-link-color);
+}
+
 .alert-primary {
     --bs-alert-color: var(--bs-primary-text);
     --bs-alert-bg: var(--bs-primary-bg-subtle);
@@ -458,10 +463,6 @@ a:link:hover {
     margin-right: .75rem;
     width: 3rem;
     text-align: right;
-}
-
-.count-hint {
-    font-weight: bold;
 }
 
 .hidden {

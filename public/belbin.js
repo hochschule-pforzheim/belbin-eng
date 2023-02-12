@@ -132,7 +132,7 @@
         }
 
         if (sum != 10) {
-            showHint(`Summe der Punkte ist ${ sum } und nicht 10.`, 'danger');
+            showHint($(`<strong>Summe der Punkte ist ${ sum } und nicht 10.</strong>`), 'danger');
         } else {
             current.result = result;
             advance();
@@ -141,7 +141,7 @@
 
     function showHint(text, className='primary') {
         $('.count-hint')
-            .text(text)
+            .html(text)
             .removeClass('alert-primary alert-danger alert-warning alert-success hidden')
             .addClass(`alert-${ className }`);
     }
@@ -158,12 +158,12 @@
         }
 
         if (sum === 10) {
-            showHint('Alle Punkte vergeben.', 'success');
+            showHint($(`<span>Alle Punkte vergeben. <a href class="btn-next alert-link">Weiter</a>.</span>`), 'success');
         } else
         if (sum < 10) {
-            showHint(`Noch ${ 10 - sum } freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.`, 'warning');
+            showHint($(`<span>Noch <strong>${ 10 - sum }</strong> freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.</span>`), 'warning');
         } else {
-            showHint(`${ sum - 10 } Punkt${ sum - 10 !== 1 ? 'e' : '' } zu viel vergeben.`, 'danger');
+            showHint($(`<span><strong>${ sum - 10 } Punkt${ sum - 10 !== 1 ? 'e' : '' }</strong> zu viel vergeben.</span>`), 'danger');
         }
     }
     
@@ -366,6 +366,8 @@
         $("#cbody input").on('input change', checkAssignedPoints);
 
         $('#cbody form').on('submit', checkFieldsAndAdvance);
+
+        $('#cbody form').on('click', '.btn-next', checkFieldsAndAdvance);
     }
     
     $(function() {
