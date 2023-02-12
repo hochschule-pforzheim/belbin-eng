@@ -242,4 +242,15 @@ button:hover {
 input[type='text'] {
     padding: 3px 3px;
     text-align: right;
+
+.show-questions,
+.show-summary,
+.show-intro {
+    display: none;
+}
+
+.state-questions .show-questions,
+.state-intro .show-intro,
+.state-summary .show-summary {
+    display: block;
 }

@@ -204,7 +204,14 @@
         return results;
     }
 
+    function setState(mode) {
+        $("body").removeClass('state-questions state-intro state-summary');
+
+        $("body").addClass(`state-${ mode }`);
+    }
+
     function advance() {
+
         if (curArea + 1 >= areas.length) {
             const results = computeResults();
 
@@ -216,6 +223,8 @@
     }
 
     function showSummary(results) {
+
+        setState('summary');
 
         var resultsMap = results.reduce(function(map, result) {
             map[result.name] = result.points;
@@ -263,11 +272,12 @@
         
         $(selectors.first).addClass("first-choice");
         $(selectors.second).addClass("second-choice");
-        
-        $("#summary-notes").show();
     }
 
     function showArea(i) {
+
+        setState('questions');
+
         curArea = i;
         var current = areas[i];
         
