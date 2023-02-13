@@ -120,13 +120,9 @@
 
         for (var i = 0; i < current.statements.length; i++) {
             var e = $("#cbody .choice-" + i);
-            var val = $(e).val();
-            if (val != "") {
-                val = parseInt(val);
-                sum += val;
-            } else {
-                val = 0;
-            }
+            var val = parseInt(e.val(), 10) || 0;
+
+            sum += val;
 
             result.push(val);
         }
