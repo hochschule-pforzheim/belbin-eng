@@ -322,7 +322,7 @@
                     <label>
                         <div class="answer">${ e }</div>
 
-                        <input class="form-control choice-${ i }" type="text" maxlength="2"/>
+                        <input inputmode="decimal" class="form-control choice-${ i }" type="text" maxlength="2"/>
 
                         <div class="input-group">
                             <a class="btn btn-outline btn-inc-dec" data-inc="-1">-</a>
