@@ -1,7 +1,7 @@
 (function() {
     var curArea = -1;
     var areas = [
-        {desc: "Welchen Beitrag glaube ich in einem Team leisten zu können:", statements: [
+        {desc: "Welchen Beitrag glaube ich in einem Team leisten zu können?", statements: [
             "Ich glaube, ich kann schnell neue Möglichkeiten erkennen und nutzen. ",
             "Ich kann gut mit ganz unterschiedlichen Leuten zusammenarbeiten. ",
             "Es liegt in meiner Natur, Ideen hervorzubringen. ",
