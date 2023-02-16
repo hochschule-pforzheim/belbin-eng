@@ -142,7 +142,7 @@
             .addClass(`alert-${ className }`);
     }
 
-    function checkAssignedPoints(event) {
+    function checkAssignedPoints() {
         var current = areas[curArea];
         var sum = 0;
 
@@ -161,6 +161,9 @@
             el.find('.next-link').on('click', checkFieldsAndAdvance);
 
             showHint(el, 'success');
+        } else
+        if (sum === 0) {
+            showHint($(`<span>Verteile <strong>${ 10 - sum }</strong> Punkte auf zutreffende Aussagen.</span>`), 'warning');
         } else
         if (sum < 10) {
             showHint($(`<span>Noch <strong>${ 10 - sum }</strong> freie${ 10 - sum === 1 ? 'r' : '' } Punkt${ 10 - sum === 1 ? '' : 'e' }.</span>`), 'warning');
@@ -356,7 +359,7 @@
 
             input.val(Math.max(value + inc, 0));
 
-            checkAssignedPoints(event);
+            checkAssignedPoints();
         });
 
         $('main').get(0).scrollIntoView({
@@ -364,6 +367,8 @@
         });
 
         $('#cbody .choice-0').focus();
+
+        checkAssignedPoints();
 
         $("#cbody input").on('input change', checkAssignedPoints);
 
