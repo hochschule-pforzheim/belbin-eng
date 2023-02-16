@@ -311,6 +311,7 @@
         $("#content h2").text(`Frage ${ (i + 1) } von ${ areas.length }`);
 
         $("#cbody").html(`
+            <div class="alert alert-primary count-hint hidden sticky"></div>
             <form>
                 <p>${ current.desc }</p>
                 <ol class="choices"></ol>
@@ -338,8 +339,6 @@
         });
         
         $("#cbody form").append(`
-            <div class="alert alert-primary count-hint hidden sticky"></div>
-
             <p class="footer">
 
                 <button class="btn btn-primary btn-lg btn-next" type="submit">
