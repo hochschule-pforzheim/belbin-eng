@@ -369,7 +369,7 @@
 
         checkAssignedPoints();
 
-        $("#cbody input").on('input change', checkAssignedPoints);
+        $("#cbody input").on('input', checkAssignedPoints);
 
         $('#cbody form').on('submit', checkFieldsAndAdvance);
     }
