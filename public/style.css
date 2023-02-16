@@ -584,7 +584,7 @@ a.alert-link {
 
 @media screen and (min-width: 769px) {
     main {
-        max-width: 850px;
+        max-width: 768px;
     }
 
     .img {
